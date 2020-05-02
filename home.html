@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+	<!-- <link rel="stylesheet" type="text/css" href="../static/css/styles.css"> -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+
+	<header>
+		<div class="container">
+		<div id="brandname">
+			ML App
+		</div>
+		<h2>Spam Detection</h2>
+		
+	</div>
+	</header>
+
+	<div class="ml-container">
+<center>
+<form action="{{ url_for('text')}}" method="POST">
+		<label for="spam">Choose what kind of spam you want to detect:</label>
+<br>       
+            <input type="submit" class="btn-info" value="Text"> </input>
+</form>
+<form action="{{ url_for('sms')}}" method="POST">
+                   <input type="submit" class="btn-info" value="SMS"> </input>
+</form>
+
+<form action="{{ url_for('email')}}" method="POST">
+                   <input type="submit" class="btn-info" value="Email">  </input>
+</form>
+<form action="{{ url_for('youtube')}}" method="POST">
+                   <input type="submit" class="btn-info" value="Youtube">  </input>
+</form>		
+<center>
+	</div>
+
+	
+	
+
+</body>
+</html>
